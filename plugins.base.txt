@@ -26,7 +26,7 @@ momentjs:1.1.1
 build-timeout:1.17.1
 javadoc:1.4
 maven-plugin:2.13
-token-macro:1.12.1
+token-macro:2.0
 script-security:1.22
 handlebars:1.1.1
 branch-api:1.10

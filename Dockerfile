@@ -1,4 +1,4 @@
-FROM quay.io/ukhomeofficedigital/centos-base:v0.2.0
+FROM quay.io/ukhomeofficedigital/centos-base:v0.4.0
 
 RUN yum install -y wget && wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm && \
   rpm -ivh epel-release-7-8.noarch.rpm
@@ -7,7 +7,7 @@ RUN yum install -y wget && wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/
 RUN yum install -y -q python-pip java-headless fontconfig dejavu-sans-fonts git parallel which; yum clean all; pip install awscli
 
 # Install jenkins
-ENV JENKINS_VERSION 2.19
+ENV JENKINS_VERSION 2.26
 RUN yum install -y -q http://pkg.jenkins-ci.org/redhat/jenkins-${JENKINS_VERSION}-1.1.noarch.rpm
 
 #ADD docker.repo /etc/yum.repos.d/docker.repo
